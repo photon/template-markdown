@@ -1,0 +1,12 @@
+<phpunit colors="true"
+         bootstrap="vendor/photon/photon/src/photon/testbootstrap.php"
+>
+    <testsuites>
+        <testsuite name="Markdown Tests for Photon template engine">
+             <directory>vendor/photon/template-markdown/tests/</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="photon.config" value="vendor/photon/template-markdown/config.test.php"/>
+    </php>
+</phpunit>

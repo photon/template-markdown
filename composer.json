@@ -1,0 +1,28 @@
+{
+    "name": "photon/template-markdown",
+    "version": "1.0",
+    "type": "library",
+    "description": "Markdown parser for Photon template engine",
+    "keywords": [
+        "photon",
+        "template",
+        "markdown"
+    ],
+    "homepage": "http://www.photon-project.com/",
+    "license": "LGPL-2.1",
+    "authors": [
+        {
+            "name": "Community",
+            "homepage": "https://github.com/photon/template-markdown/blob/master/CONTRIBUTORS.md"
+        }
+    ],
+    "require": {
+        "photon/photon": ">=0.3.0",
+        "michelf/php-markdown": "~1.4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "photon\\template\\tag\\": "src/"
+        }
+    }
+}
