@@ -1,18 +1,21 @@
 language: php
 
 php:
+  - 5.3
+  - 5.4
   - 5.5
+
 
 matrix:
   fast_finish: true
 
 before_script:
   - echo "extension = zmq.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-  - printf "yes\nyes\nno\nyes\n" | pecl install pecl_http-1.7.6
+  - printf "yes\nyes\nno\nyes\n" | pecl install pecl_http
   - composer self-update
   - mkdir test
   - cd test
-  - echo "eyJtaW5pbXVtLXN0YWJpbGl0eSI6ICJkZXYifQo=" | base64 -d  > composer.json
+  - composer init --no-interaction --stability=dev
   - composer require "photon/photon:dev-develop"
   - composer require "photon/template-markdown:dev-master"
   - cp vendor/photon/template-markdown/phpunit.xml .
