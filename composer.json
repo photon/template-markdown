@@ -1,6 +1,5 @@
 {
     "name": "photon/template-markdown",
-    "version": "1.0.1",
     "type": "library",
     "description": "Markdown parser for Photon template engine",
     "keywords": [
