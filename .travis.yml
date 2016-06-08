@@ -10,11 +10,7 @@ matrix:
   fast_finish: true
 
 before_script:
-  - echo "extension = zmq.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-  - printf "yes\nyes\nno\nyes\n" | pecl install pecl_http
-  - composer self-update
-  - mkdir test
-  - cd test
+  - ./scripts/travis
   - composer init --no-interaction --stability=dev
   - composer require "photon/template-markdown:dev-master"
   - cp vendor/photon/template-markdown/phpunit.xml .
